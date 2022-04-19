@@ -37,8 +37,11 @@
 15. **create_clock**: create_clock -name clk16M -period 62.500 [get_pins ip/port] 或者是get_ports
 
 16. **set_false_path**: set_false_path -from [get_clocks clk16M] -to [get_clocks clk32K]
-17. **分频时钟输出缓冲**: BUFG clkout1_buf(
+17. **分频时钟输出缓冲**: 
+```
+BUFG clkout1_buf(
     .O  (clk32k     ),
-    .I  (clk_32k    ),
+    .I  (clk_32k    )
 );
+```
 18. 
